@@ -25,7 +25,7 @@ function equal() {
     var exp = a.value;
 
     if (exp) {
-        try {a.value = eval(exp);}
+        try {a.value = math.evaluate(exp);}
         catch (e) {
             alert ("Syntax Error!");
             document.form.textview.value = 'Syntax Error!';
