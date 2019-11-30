@@ -26,7 +26,7 @@ function equal() {
 
     if (exp) {
         try {a.value = math.evaluate(exp);}
-        catch (e) {
+       catch (e) {
             alert ("Syntax Error!");
             document.form.textview.value = 'Syntax Error!';
             none();
@@ -52,4 +52,14 @@ function clean() {
 function back() {
     var exp = document.form.textview.value;
     document.form.textview.value = exp.substring(0, exp.length-1);
+}
+function sinFunc(){
+    var a = document.form.textview.value;
+    
+    document.form.textview.value = Math.sin(a);
+}
+function sqrFunc(){
+    var a = document.form.textview.value;
+    
+    document.form.textview.value = Math.sqrt(a);
 }
