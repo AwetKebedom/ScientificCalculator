@@ -2,15 +2,22 @@
 
 
 function insert(num) {
-
+    
+    
     var a = document.form.textview;
 
     a.value += num;
+   
+    
 }
 function opt(amd) {
+    
+    
     var view = document.form.textview;
     if (view.value != "") {
         view.value += amd;
+        
+        
     }
 }
 function zero() {
@@ -20,13 +27,15 @@ function zero() {
     }
 }
 function equal() {
-    var button = document.getElementsByClassName('none');
+    
+   
     var a = document.form.textview;
     var exp = a.value;
+    
 
     if (exp) {
         try {a.value = math.evaluate(exp);}
-        catch (e) {
+       catch (e) {
             alert ("Syntax Error!");
             document.form.textview.value = 'Syntax Error!';
             none();
@@ -37,7 +46,7 @@ function equal() {
     }
     if(a.value == 'Infinity'){
         document.form.textview.value = "Can't divide by Zero!";
-       // button.onclick ='none()';
+       
        alert('Can\'t divide by Zero!')
        none();
     }
@@ -53,3 +62,14 @@ function back() {
     var exp = document.form.textview.value;
     document.form.textview.value = exp.substring(0, exp.length-1);
 }
+function sinFunc(){
+    var a = document.form.textview.value;
+    
+    document.form.textview.value = Math.sin(a);
+}
+function sqrFunc(){
+    var a = document.form.textview.value;
+    
+    document.form.textview.value = Math.sqrt(a);
+}
+
