@@ -12,7 +12,7 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div class="main">
+        <div class="main" style="width:400px;">
             <form name="form">
                 <input class="textview" name="textview" placeholder="0" style="overflow: scroll;" disabled>
             </form>
@@ -34,6 +34,7 @@
                         <div class="button none" onclick="opt('*')"><div class="inner">×</div>
                         </div>
                     </td>
+                   
                 </tr>
                 <tr>
                     <td>
@@ -52,7 +53,28 @@
                         <div class="button none" onclick="insert('-')"><div class="inner">-</div>
                         </div>
                     </td>
+                    
                 </tr>
+                <tr>
+                    <td>
+                        <div class="button none" onclick="insert('cos')"><div class="inner">cos</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="sinFunc()"><div class="inner">sin</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="document.form.textview.value = Math.tan(document.form.textview.value)"><div class="inner">tan</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="button none" onclick="sqrFunc()"><div class="inner">sqr</div>
+                        </div>
+                    </td>
+                    
+                </tr>
+              
                 <tr>
                     <td>
                         <div class="button none" onclick="insert(4)"><div class="inner">4</div>
@@ -101,6 +123,6 @@
                 </tr>
             </table>
         </div>
-        <div id="copy">&copy;Ishu</div>
+        
     </body>
 </html>
